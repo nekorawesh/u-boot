@@ -27,18 +27,21 @@
 	};
 	config {
 		u-boot,boot-led = "alive";
-		u-boot,error-led = "comm";
+		u-boot,error-led = "error";
 	};
 	led {
-		red {
-			label = "comm";
-			gpios = <&gpiof 10 GPIO_ACTIVE_LOW>;
+		alive {
+			label = "alive";
+			gpios = <&gpiof 8 GPIO_ACTIVE_HIGH>;
 			default-state = "off";
 			status = "okay";
 		};
 
-		blue {
-			default-state = "on";
+		comm {
+			label = "comm";
+			gpios = <&gpiof 10 GPIO_ACTIVE_LOW>;
+			default-state = "off";
+			status = "okay";
 		};
 	};
 	/* USER CODE END root */
@@ -195,54 +198,12 @@
 };
 
 /* USER CODE BEGIN addons */
-&rcc {
-	st,pkcs = <
-		CLK_CKPER_DISABLED
-		CLK_ETH_PLL4P
-		CLK_SDMMC12_PLL4P
-		CLK_DSI_DSIPLL
-		CLK_STGEN_HSE
-		CLK_USBPHY_HSE
-		CLK_SPI2S1_DISABLED
-		CLK_SPI2S23_DISABLED
-		CLK_SPI45_PCLK2
-		CLK_SPI6_DISABLED
-		CLK_I2C46_HSI
-		CLK_SDMMC3_DISABLED
-		CLK_USBO_USBPHY
-		CLK_ADC_DISABLED
-		CLK_CEC_DISABLED
-		CLK_I2C12_HSI
-		CLK_I2C35_HSI
-		CLK_UART1_DISABLED
-		CLK_UART24_HSI
-		CLK_UART35_HSI
-		CLK_UART6_DISABLED
-		CLK_UART78_HSI
-		CLK_SPDIF_DISABLED
-		CLK_FDCAN_PLL4R
-		CLK_SAI1_DISABLED
-		CLK_SAI2_DISABLED
-		CLK_SAI3_DISABLED
-		CLK_SAI4_DISABLED
-		CLK_RNG1_LSI
-		CLK_RNG2_LSI
-		CLK_LPTIM1_DISABLED
-		CLK_LPTIM23_DISABLED
-		CLK_LPTIM45_DISABLED
-	>;
-};
-
 &pmic {
 	u-boot,dm-pre-reloc;
 };
 
 &v3v3 {
 	regulator-always-on;
-};
-
-&usbotg_hs {
-	hnp-srp-disable;
 };
 /* USER CODE END addons */
 
