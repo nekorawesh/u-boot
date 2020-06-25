@@ -665,8 +665,8 @@
 	touchscreen@2a {
 		compatible = "focaltech,ft6236";
 		reg = <0x2a>;
-		interrupts = <2 2>;
-		interrupt-parent = <&gpiob>;
+		interrupts = <9 2>;
+		interrupt-parent = <&gpioa>;
 		interrupt-controller;
 		touchscreen-size-x = <480>;
 		touchscreen-size-y = <800>;
@@ -676,8 +676,8 @@
 	touchscreen@38 {
 		compatible = "focaltech,ft6336";
 		reg = <0x38>;
-		interrupts = <2 2>;
-		interrupt-parent = <&gpiob>;
+		interrupts = <9 2>;
+		interrupt-parent = <&gpioa>;
 		interrupt-controller;
 		touchscreen-size-x = <480>;
 		touchscreen-size-y = <800>;
