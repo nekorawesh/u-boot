@@ -464,13 +464,6 @@
 			drive-push-pull;
 			bias-pull-up;
 		};
-		pins2 {
-			u-boot,dm-spl;
-			pinmux = <STM32_PINMUX('E', 3, AF9)>; /* SDMMC2_CK */
-			slew-rate = <2>;
-			drive-push-pull;
-			bias-pull-up;
-		};
 	};
 
 	sdmmc2_d47_sleep_pins_mx: sdmmc2_d47_sleep_mx-0 {
