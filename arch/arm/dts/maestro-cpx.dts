@@ -83,15 +83,15 @@
 
 	/* USER CODE BEGIN root */
 	aliases {
-		serial0 = &usart2;
-		serial1 = &usart3;
-		serial2 = &uart4;
-		serial3 = &uart8;
+		serial0 = &uart8;
+		serial1 = &uart4;
+		serial2 = &usart2;
+		serial3 = &usart3;
 		ethernet0 = &ethernet0;
 	};
 
 	chosen {
-		stdout-path = "serial3:115200n8";
+		stdout-path = "serial0:115200n8";
 	};
 
 	usb_phy_tuning: usb-phy-tuning {
