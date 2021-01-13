@@ -52,13 +52,13 @@
 
 		vdev0vring1: vdev0vring1@10042000 {
 			compatible = "shared-dma-pool";
-			reg = <0x10041000 0x2000>;
+			reg = <0x10042000 0x2000>;
 			no-map;
 		};
 
 		vdev0buffer: vdev0buffer@10044000 {
 			compatible = "shared-dma-pool";
-			reg = <0x10042000 0x4000>;
+			reg = <0x10044000 0x4000>;
 			no-map;
 		};
 
