@@ -720,7 +720,6 @@
 	snps,reset-delays-us = <0>, <10000>, <1000000>;
 	snps,reset-gpio = <&gpioa 5 GPIO_ACTIVE_LOW>;
 	snps,reset-active-low = <1>;
-	local-mac-address = [00 80 ea 42 69 eb];
 	phy-mode = "mii";
 	phy-handle = <&phy0>;
 
